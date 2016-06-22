@@ -1,0 +1,30 @@
+arudo@arudo-pc:~/Escritorio/paralelos$ valgrind --tool=cachegrind ./matriz 
+==22052== Cachegrind, a cache and branch-prediction profiler
+==22052== Copyright (C) 2002-2015, and GNU GPL'd, by Nicholas Nethercote et al.
+==22052== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==22052== Command: ./matriz
+==22052== 
+--22052-- warning: L3 cache found, using its data for the LL simulation.
+Ingrese fila y columna de la primera matriz: 100
+100
+Ingrese fila y columna de la segunda matriz: 100
+100
+Tiempo transcurrido: 0.360948
+
+==22052== 
+==22052== I   refs:      47,818,213
+==22052== I1  misses:         1,204
+==22052== LLi misses:         1,164
+==22052== I1  miss rate:       0.00%
+==22052== LLi miss rate:       0.00%
+==22052== 
+==22052== D   refs:      20,727,159  (19,543,799 rd   + 1,183,360 wr)
+==22052== D1  misses:         8,988  (     7,150 rd   +     1,838 wr)
+==22052== LLd misses:         4,315  (     2,592 rd   +     1,723 wr)
+==22052== D1  miss rate:        0.0% (       0.0%     +       0.2%  )
+==22052== LLd miss rate:        0.0% (       0.0%     +       0.1%  )
+==22052== 
+==22052== LL refs:           10,192  (     8,354 rd   +     1,838 wr)
+==22052== LL misses:          5,479  (     3,756 rd   +     1,723 wr)
+==22052== LL miss rate:         0.0% (       0.0%     +       0.1%  )
+arudo@arudo-pc:~/Escritorio/paralelos$ 
